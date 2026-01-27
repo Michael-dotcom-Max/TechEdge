@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login – TechEdge</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+      <div class="nav-container">
+        <a href="index.html" class="logo">
+          <span class="logo-bracket">[</span>
+          <span class="logo-text">TechEdge</span>
+          <span class="logo-bracket">]</span>
+        </a>
+
+        <div class="nav-menu">
+          <a href="index.html#home" class="nav-link">Home</a>
+          <a href="index.html#products" class="nav-link">Products</a>
+          <a href="index.html#about" class="nav-link">About</a>
+          <a href="index.html#contact" class="nav-link">Contact</a>
+          <div class="nav-divider"></div>
+          <a href="signup.html" class="nav-link nav-link-cta">Sign Up</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Login Section -->
+    <section class="auth-section">
+      <div class="auth-container">
+        <div class="auth-box">
+          <div class="auth-header">
+            <h1 class="auth-title">Welcome Back</h1>
+            <p class="auth-subtitle">Login to your TechEdge account</p>
+          </div>
+
+          <form class="auth-form" id="loginForm">
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                id="email"
+                class="form-input"
+                placeholder="your.email@example.com"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="password" class="form-label">Password</label>
+              <input
+                type="password"
+                id="password"
+                class="form-input"
+                placeholder="Enter your password"
+                required
+              />
+            </div>
+
+            <div class="form-options">
+              <label class="checkbox-label">
+                <input type="checkbox" id="remember" />
+                <span>Remember me</span>
+              </label>
+              <a href="#" class="forgot-link">Forgot password?</a>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">
+              Login
+              <span class="btn-arrow">→</span>
+            </button>
+
+            <div class="auth-divider">
+              <span>or</span>
+            </div>
+
+            <div class="social-login">
+              <button type="button" class="btn-social">
+                <span>Continue with Google</span>
+              </button>
+              <button type="button" class="btn-social">
+                <span>Continue with GitHub</span>
+              </button>
+            </div>
+          </form>
+
+          <div class="auth-footer">
+            <p>
+              Don't have an account?
+              <a href="signup.html" class="auth-link">Sign up</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="auth.js"></script>
+  </body>
+</html>
