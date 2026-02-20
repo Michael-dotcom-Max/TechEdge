@@ -7,30 +7,34 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
+  <header class="site-header" id="site-header">
+    <div class="header-inner" style="max-width:var(--container);margin:0 auto;">
       <a class="logo" href="index.html">TechEdge</a>
-      <nav class="site-nav">
+      <nav class="site-nav" id="site-nav">
         <ul>
           <li><a href="index.html#products">Products</a></li>
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
       </nav>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
     </div>
   </header>
 
   <main class="container cart-page">
-    <h1 class="section-title">Your Cart</h1>
+    <h1 class="section-title" style="margin-bottom:4px">Your Cart</h1>
+    <p class="muted" style="margin-bottom:8px">Review items before checkout.</p>
 
-    <div id="cart-empty" class="muted">Loading cart...</div>
+    <div id="cart-empty" class="muted" style="padding:48px 0;font-size:16px;text-align:center;"></div>
 
     <div id="cart-items" class="cart-items" aria-live="polite"></div>
 
     <aside id="cart-summary" class="cart-summary" style="display:none">
-      <p>Subtotal: <strong id="cart-subtotal">$0.00</strong></p>
-      <p>Shipping: <strong id="cart-shipping">$0.00</strong></p>
-      <p>Total: <strong id="cart-total">$0.00</strong></p>
-      <div class="cart-actions">
+      <p>Subtotal <strong id="cart-subtotal">$0.00</strong></p>
+      <p>Shipping <strong id="cart-shipping">$0.00</strong></p>
+      <p>Total <strong id="cart-total" style="font-family:var(--font-mono);font-size:22px;background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">$0.00</strong></p>
+      <div class="cart-actions" style="padding-top:4px">
         <a id="continue-shopping" class="btn ghost" href="index.html#products">Continue shopping</a>
         <button id="proceed-pay" class="btn">Proceed to Pay</button>
       </div>
@@ -38,9 +42,7 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>&copy; <span id="year"></span> TechEdge — All rights reserved.</p>
-    </div>
+    <div class="container"><p>&copy; <span id="year"></span> TechEdge — All rights reserved.</p></div>
   </footer>
 
   <script src="script.js" defer></script>
