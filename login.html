@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login — TechEdge</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="login-page">
+  <a href="index.html" class="logo" style="position:fixed;top:24px;left:32px;z-index:10;font-size:18px;">TechEdge</a>
+
+  <main class="login-wrap">
+    <div class="login-card" role="dialog" aria-labelledby="loginTitle">
+      <h2 id="loginTitle">Welcome back</h2>
+      <p class="muted">Sign in to your account and start exploring.</p>
+
+      <form id="login-form" class="login-form" autocomplete="on" novalidate>
+        <label class="vis" for="email">Email</label>
+        <input id="email" type="email" name="email" placeholder="you@example.com" required autofocus />
+
+        <label class="vis" for="password">Password</label>
+        <div class="password-row">
+          <input id="password" type="password" name="password" placeholder="Enter your password" required />
+          <button type="button" id="pwd-toggle" class="pwd-toggle" aria-label="Show password">Show</button>
+        </div>
+
+        <div class="form-row remember">
+          <label><input id="remember" type="checkbox" /> Remember me</label>
+          <a class="link small" href="index.html">← Back to home</a>
+        </div>
+
+        <div class="form-row">
+          <button type="submit" class="btn large" style="width:100%">Login</button>
+        </div>
+
+        <p id="login-status" class="form-status" aria-live="polite"></p>
+      </form>
+
+      <div class="login-foot">
+        <p class="muted small">Demo credentials: <strong style="color:rgba(200,230,255,0.7)">demo@demo.com</strong> / <strong style="color:rgba(200,230,255,0.7)">password</strong></p>
+        <p class="muted small" style="margin-top:8px">Don't have an account? <a href="signup.html" class="link">Sign up</a></p>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

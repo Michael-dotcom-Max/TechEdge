@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Checkout — TechEdge</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <div class="header-inner" style="max-width:var(--container);margin:0 auto;">
+      <a class="logo" href="index.html">TechEdge</a>
+      <nav class="site-nav" id="site-nav">
+        <ul>
+          <li><a href="index.html#products">Products</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </nav>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container pay-page">
+    <h1 class="section-title" style="margin-bottom:4px">Checkout</h1>
+    <p class="muted" style="margin-bottom:28px">Secure, simulated payment — no real transactions are processed.</p>
+
+    <section class="pay-methods">
+      <div class="pay-grid">
+
+        <!-- Bank Transfer -->
+        <div class="pay-card" id="bank-card">
+          <h3>🏦 Bank Transfer</h3>
+          <p>Transfer to our account. Your order will be marked pending and confirmed automatically after submission.</p>
+          <p class="muted small"><strong>Bank:</strong> Demo Bank &bull; <strong>Acct:</strong> 123456789 &bull; <strong>IBAN:</strong> DEMO00001234</p>
+          <form id="bank-form">
+            <label>Account name<input type="text" id="bank-name" placeholder="Your full name" required /></label>
+            <label>Reference (transaction ID)<input type="text" id="bank-ref" placeholder="e.g. TXN-20240001" required /></label>
+            <div style="margin-top:8px"><button class="btn" type="submit">Submit Transfer</button></div>
+          </form>
+        </div>
+
+        <!-- Crypto -->
+        <div class="pay-card" id="crypto-card">
+          <h3>⛓ Crypto</h3>
+          <p>Send crypto to the demo wallet and paste your transaction hash below. On-chain confirmation is simulated.</p>
+          <p class="muted small"><strong>Wallet:</strong> 0xDEMO000000000000000000000000000000</p>
+          <form id="crypto-form">
+            <label>Network<input type="text" id="crypto-network" value="ETH" required /></label>
+            <label>Transaction hash<input type="text" id="crypto-hash" placeholder="0x..." required /></label>
+            <div style="margin-top:8px"><button class="btn" type="submit">Submit Tx Hash</button></div>
+          </form>
+        </div>
+
+        <!-- PayPal -->
+        <div class="pay-card" id="paypal-card">
+          <h3>💙 PayPal</h3>
+          <p>Instant checkout via PayPal. We'll simulate the PayPal flow and complete your payment automatically.</p>
+          <form id="paypal-form">
+            <label>PayPal email<input type="email" id="paypal-email" placeholder="you@paypal.com" required /></label>
+            <div style="margin-top:8px"><button class="btn" type="submit" style="background:linear-gradient(135deg,#1e3a8a,#1d4ed8);box-shadow:0 4px 20px rgba(30,58,138,0.4)">Pay with PayPal</button></div>
+          </form>
+        </div>
+
+      </div>
+
+      <div id="pay-status" class="form-status" aria-live="polite"></div>
+      <div class="pay-actions" style="margin-top:24px">
+        <a class="btn ghost" href="cart.html">← Back to cart</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

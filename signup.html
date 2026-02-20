@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sign Up — TechEdge</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="login-page">
+  <a href="index.html" class="logo" style="position:fixed;top:24px;left:32px;z-index:10;font-size:18px;">TechEdge</a>
+
+  <main class="login-wrap">
+    <div class="login-card" role="dialog" aria-labelledby="signupTitle">
+      <h2 id="signupTitle">Create account</h2>
+      <p class="muted">Join TechEdge and unlock exclusive offers.</p>
+
+      <form id="signup-form" class="login-form" autocomplete="on" novalidate>
+        <label class="vis" for="s-email">Email</label>
+        <input id="s-email" type="email" name="email" placeholder="you@example.com" required autofocus />
+
+        <label class="vis" for="s-password">Password</label>
+        <div class="password-row">
+          <input id="s-password" type="password" name="password" placeholder="Create a strong password" required />
+          <button type="button" id="s-pwd-toggle" class="pwd-toggle" aria-label="Show password">Show</button>
+        </div>
+
+        <div class="form-row">
+          <button type="submit" class="btn large" style="width:100%">Create account</button>
+        </div>
+
+        <p id="signup-status" class="form-status" aria-live="polite"></p>
+      </form>
+
+      <div class="login-foot">
+        <p class="muted small">Already have an account? <a href="login.html" class="link">Login</a></p>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
